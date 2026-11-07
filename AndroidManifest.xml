@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher Spark LTZ 2016 — Chevrolet Spark LTZ 2016 Classic -->
+<!-- Pantalla china A100, Android 13, 2 GB RAM, 64 GB. Ligero, solo vistas XML. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.noe.sparklauncher">
+
+    <!-- Solo lo necesario: ver apps instaladas y abrir ajustes de Bluetooth. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Launcher Spark LTZ"
+        android:theme="@style/Theme.SparkLauncher"
+        android:supportsRtl="true">
+
+        <!-- MainActivity es la pantalla principal (HOME). -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
